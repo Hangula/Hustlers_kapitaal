@@ -1,0 +1,4 @@
+class Categories < ApplictionController
+
+end
+ 
