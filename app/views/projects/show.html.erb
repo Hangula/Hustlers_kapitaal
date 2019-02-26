@@ -1,3 +1,8 @@
 <h2><%= @project.title %></h2>
 <h3><%= @project.info %></h3>
 <p><%= @project.level %></p>
+
+<%= link_to "Back", root_path %> 
+<%= link_to "Edit", edit_project_path %> 
+<%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" } %> 
+
