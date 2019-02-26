@@ -1,7 +1,4 @@
-class Project < ApplicationRecord
+class Project < ActiveRecord::Base
 
-	has_many :creatives
-	belongs_to :category
-	belongs_to :company
-
+	
 end
