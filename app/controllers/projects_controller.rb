@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def new
-		@project = Project.new
+		@project = current_creative.project.build
 	end
 
 	def show
@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def create
-		@project = Project.new(project_params)
+		@project = current_creative.project.build(project_params)
 
 		if @project.save
 			redirect_to root_path
